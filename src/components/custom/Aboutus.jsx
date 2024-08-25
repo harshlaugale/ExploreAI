@@ -4,7 +4,7 @@ function Aboutus() {
   return (
     <div className="flex h-screen">
       {/* Left Side */}
-      <div className="left bg-blue-700 bg-opacity-80 text-white flex flex-col items-center justify-center p-8 w-1/2">
+      <div className="left bg-blue-600 bg-opacity-80 text-white flex flex-col items-center justify-center p-8 w-1/2">
         <h2 className="text-4xl italic font-bold text-center">
           Travel the world through <span className="text-black">ExploreAI</span>
         </h2>

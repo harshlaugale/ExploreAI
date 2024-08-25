@@ -7,6 +7,7 @@ import CreateTrip from './create-trip/index.jsx';
 import Header from './components/custom/Header.jsx';
 import Aboutus from './components/custom/AboutUs.jsx'; // Import AboutUs
 import Review from './components/custom/Review.jsx';
+import Contact from './components/custom/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,15 @@ const router = createBrowserRouter([
       <>
         <Header />
         <Review />
+      </>
+    ),
+  },
+  {
+    path: '/contact',  // Define the about-us route
+    element: (
+      <>
+        <Header />
+        <Contact />
       </>
     ),
   },
