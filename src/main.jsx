@@ -1,13 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import './index.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import CreateTrip from './create-trip/index.jsx';
 import Header from './components/custom/Header.jsx';
-import Aboutus from './components/custom/AboutUs.jsx'; // Import AboutUs
+import Aboutus from './components/custom/AboutUs.jsx';
 import Review from './components/custom/Review.jsx';
 import Contact from './components/custom/Contact.jsx';
+import { Toaster } from "@/components/ui/sonner";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       <>
         <Header />
         <App />
+        <Toaster />
       </>
     ),
   },
@@ -25,33 +27,37 @@ const router = createBrowserRouter([
       <>
         <Header />
         <CreateTrip />
+        <Toaster />
       </>
     ),
   },
   {
-    path: '/aboutus',  // Define the about-us route
+    path: '/aboutus',
     element: (
       <>
         <Header />
         <Aboutus />
+        <Toaster />
       </>
     ),
   },
   {
-    path: '/review',  // Define the about-us route
+    path: '/review',
     element: (
       <>
         <Header />
         <Review />
+        <Toaster />
       </>
     ),
   },
   {
-    path: '/contact',  // Define the about-us route
+    path: '/contact',
     element: (
       <>
         <Header />
         <Contact />
+        <Toaster />
       </>
     ),
   },
