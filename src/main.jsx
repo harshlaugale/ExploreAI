@@ -8,8 +8,10 @@ import Header from './components/custom/Header.jsx';
 import Aboutus from './components/custom/AboutUs.jsx';
 import Review from './components/custom/Review.jsx';
 import Contact from './components/custom/Contact.jsx';
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from '@/components/ui/sonner';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
+// Define the routes for the application
 const router = createBrowserRouter([
   {
     path: '/',
@@ -63,8 +65,12 @@ const router = createBrowserRouter([
   },
 ]);
 
+// Render the application to the root element
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
+    {/* Provide the Google OAuth context to the entire application */}
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_CLIENT_ID}>
+      <RouterProvider router={router} />
+    </GoogleOAuthProvider>
+  </StrictMode>
 );
