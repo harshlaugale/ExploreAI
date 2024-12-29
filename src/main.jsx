@@ -70,6 +70,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* Provide the Google OAuth context to the entire application */}
     <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_CLIENT_ID}>
+      
       <RouterProvider router={router} />
     </GoogleOAuthProvider>
   </StrictMode>

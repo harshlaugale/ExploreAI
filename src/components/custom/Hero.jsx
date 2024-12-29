@@ -17,7 +17,7 @@ function Hero() {
       <div className="absolute inset-0 bg-black opacity-50"></div> {/* Black transparent tint */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center gap-12">
         <h1 className="font-extrabold text-5xl md:text-6xl text-white">
-          Discover Your Next Adventure with AI: <br />Personalized Itineraries at Your Fingertips
+          Discover Your Next Adventure : <br />Personalized Itineraries at Your Fingertips
         </h1>
         <p className="text-xl text-white">
           Your personal trip planner and travel curator, <br />creating custom itineraries tailored to your interest and budget.
